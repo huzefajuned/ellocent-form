@@ -1,0 +1,79 @@
+.main {
+  background-color: rgb(232, 232, 232);
+  width: 30vw;
+  height: auto;
+  margin: 5% auto;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  /* border:  2px solid blue ; */
+}
+#heading {
+  font-size: 22px;
+  color: rgb(27, 27, 27);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: auto;
+  /* border: 2px solid blue; */
+  padding: 10px;
+  /* height: 500px; */
+}
+input,
+.selectGender {
+  /* background-color: aliceblue; */
+  width: 90%;
+  outline: none;
+  height: 40px;
+  margin: 5px auto;
+  border-radius: 6px;
+  border: 1px solid wheat;
+  font-size: 20px;
+  font-family: monospace;
+}
+input:hover {
+  border: 1px solid rgb(188, 176, 14);
+  cursor: pointer;
+}
+.contact {
+  width: 90%;
+  margin: auto;
+}
+.selectGender {
+  width: 90%;
+  padding: 0px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  /* background-color: rgb(94, 64, 23); */
+  border: none;
+  /* background-color: rgb(221, 215, 215); */
+}
+.selectGender > input {
+  width: 25px;
+}
+
+#submitBtn {
+  background-color: royalblue;
+  width: 90%;
+  margin: auto;
+  height: 40px;
+  color: rgb(5, 78, 142);
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 22px;
+  font-family: monospace;
+}
+#submitBtn:hover {
+  background-color: rgb(180, 181, 180);
+  color: black;
+  cursor: pointer;
+}
