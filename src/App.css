@@ -1,5 +1,4 @@
-body{
-    background-color: rgb(210, 210, 210);
-    font-family: monospace;
-
+body {
+  background: linear-gradient(to right, #042f70, #2d2e30);
+  font-family: monospace;
 }

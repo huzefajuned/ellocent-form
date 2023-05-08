@@ -11,30 +11,14 @@ const UserForm = () => {
   const [gender, setGender] = useState("");
   const [password, setPassword] = useState("");
   const [cPassword, setCPassword] = useState("");
-  const resetForm = () => {
-    console.log(name, email, password, cPassword, gender, mobile);
-    setName("");
-    setEmail("");
-    setMobile("");
-    setGender("");
-    setPassword("");
-    setCPassword("");
-    console.log(name, email, password, cPassword, gender, mobile);
-  };
 
   const onHandleSubmit = () => {
     const regexForName = /^[A-Za-z ]{3,15}$/;
-                        
+
     const regexForEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     const regexForPassword =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/;
-    const data = {
-      name,
-      email,
-      mobile,
-      gender,
-      password,
-    };
+
     if (!name || !email || !mobile || !gender || !password) {
       toast.error("All Fields are Required");
     } else if (!regexForName.test(name)) {
@@ -50,8 +34,16 @@ const UserForm = () => {
     } else if (password !== cPassword) {
       toast.error("Password Doesn't Matched");
     } else {
-      toast.success("validate and saved");
-      resetForm();
+      toast.success("validate and saved to console, Named: user Object");
+      console.log({
+        user: { name, email, mobile, gender, password, cPassword },
+      });
+      setName("");
+      setEmail("");
+      setMobile("");
+      setGender("");
+      setPassword("");
+      setCPassword("");
     }
   };
 
